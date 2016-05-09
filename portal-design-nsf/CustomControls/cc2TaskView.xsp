@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xp:view
+	xmlns:xp="http://www.ibm.com/xsp/core"
+	xmlns:xe="http://www.ibm.com/xsp/coreex">
+	<xe:dynamicViewPanel
+		id="dynamicViewTask"
+		refreshId="dynamicViewTask"
+		dataTableStyleClass="table table-hover table-striped"
+		viewStyle="width:100%;"
+		var="taskRow">
+		<xp:this.facets>
+			<xp:button
+				value="New Task"
+				id="btnCreateTask"
+				xp:key="headerPager"
+				styleClass="btn btn-info">
+				<xp:eventHandler
+					event="onclick"
+					submit="true"
+					refreshMode="partial"
+					refreshId="divTaskWrapper"
+					execMode="partial"
+					execId="divTaskWrapper">
+					<xp:this.action><![CDATA[#{javascript:App.taskCon.CreateDocument();}]]></xp:this.action>
+				</xp:eventHandler>
+			</xp:button>
+			<xp:pager
+				layout="Previous Group Next"
+				id="pagerTask"
+				xp:key="footerPager"
+				for="dynamicViewTask"
+				partialExecute="true"
+				partialRefresh="true">
+			</xp:pager>
+		</xp:this.facets>
+		<xe:this.data>
+			<xp:dominoView
+				var="viewTask"
+				databaseName="demo\ox2\final\portaldata.nsf"
+				viewName="Tasks">
+			</xp:dominoView>
+		</xe:this.data>
+		<xp:eventHandler
+			event="onColumnClick"
+			submit="true"
+			refreshMode="partial"
+			refreshId="divTaskWrapper"
+			execMode="partial"
+			execId="divTaskWrapper">
+			<xe:this.action><![CDATA[#{javascript:App.taskCon.OpenDocument(taskRow.getUniversalID());}]]></xe:this.action>
+		</xp:eventHandler>
+	</xe:dynamicViewPanel>
+</xp:view>

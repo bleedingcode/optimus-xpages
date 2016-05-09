@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xp:view
+	xmlns:xp="http://www.ibm.com/xsp/core"
+	xmlns:xe="http://www.ibm.com/xsp/coreex"
+	xmlns:xc="http://www.ibm.com/xsp/custom">
+	<xp:div
+		id="divLeaveWrapper">
+		<xe:switchFacet
+			id="switchLeave"
+			selectedFacet="#{App.leaveCon.facet}">
+			<xp:this.facets>
+				<xc:cc1LeaveView xp:key="view"></xc:cc1LeaveView>
+				<xc:cc1LeaveForm xp:key="form"></xc:cc1LeaveForm>
+			</xp:this.facets>
+		</xe:switchFacet>
+	</xp:div>
+</xp:view>

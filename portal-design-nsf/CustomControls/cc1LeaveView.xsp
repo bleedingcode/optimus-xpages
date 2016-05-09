@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xp:view xmlns:xp="http://www.ibm.com/xsp/core" xmlns:xe="http://www.ibm.com/xsp/coreex">
+
+	<xe:dynamicViewPanel
+		id="dynamicViewLeave"
+		refreshId="dynamicViewLeave"
+		dataTableStyleClass="table table-hover table-striped"
+		viewStyle="width:100%;"
+		var="leaveRow">
+		<xp:this.facets>
+			<xp:button
+				value="New Leave Request"
+				id="btnCreateLeave"
+				xp:key="headerPager"
+				styleClass="btn btn-info">
+				<xp:eventHandler
+					event="onclick"
+					submit="true"
+					refreshMode="partial"
+					refreshId="divLeaveWrapper"
+					execMode="partial"
+					execId="divLeaveWrapper">
+					<xp:this.action><![CDATA[#{javascript:App.leaveCon.CreateDocument();}]]></xp:this.action>
+				</xp:eventHandler>
+			</xp:button>
+			<xp:pager
+				layout="Previous Group Next"
+				id="pagerLeave"
+				xp:key="footerPager"
+				for="dynamicViewLeave"
+				partialExecute="true"
+				partialRefresh="true">
+			</xp:pager>
+		</xp:this.facets>
+		<xe:this.data>
+			<xp:dominoView
+				var="viewLeave"
+				databaseName="demo\ox2\final\portaldata.nsf"
+				viewName="LeaveRequests">
+			</xp:dominoView>
+		</xe:this.data>
+		<xp:eventHandler
+			event="onColumnClick"
+			submit="true"
+			refreshMode="partial"
+			refreshId="divLeaveWrapper"
+			execMode="partial"
+			execId="divLeaveWrapper">
+			<xe:this.action><![CDATA[#{javascript:App.leaveCon.OpenDocument(leaveRow.getUniversalID());}]]></xe:this.action>
+		</xp:eventHandler>
+	</xe:dynamicViewPanel></xp:view>

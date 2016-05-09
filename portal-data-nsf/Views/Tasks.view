@@ -1,0 +1,38 @@
+<?xml version='1.0' encoding='utf-8'?>
+<note class='view' xmlns='http://www.lotus.com/dxl' version='9.0' maintenanceversion='1.4'
+ replicaid='42257FAE00409AF5'>
+<noteinfo noteid='14a' unid='B746736791AEBCD242257FAE003F9A14' sequence='2'>
+<created><datetime>20160509T133442,12+02</datetime></created>
+<modified><datetime>20160509T151127,44+02</datetime></modified>
+<revised><datetime>20160509T151127,43+02</datetime></revised>
+<lastaccessed><datetime>20160509T151127,44+02</datetime></lastaccessed>
+<addedtofile><datetime>20160509T134540,03+02</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=John Jardin/O=Ukuvuma</name></updatedby>
+<wassignedby><name>CN=John Jardin/O=Ukuvuma</name></wassignedby>
+<item name='$FormulaClass' sign='true'><text>1</text></item>
+<item name='$Index' sign='true'><text/></item>
+<item name='$Formula' summary='true' sign='true'><formula compiled='true'>
+WAAFACwAKAAEAAgABwAJAAQAVGFza05hbWVEdWVEYXRlJENvbmZsaWN0JFJFRgQABAAAABgABQAE
+AEZvcm0BAAQAVGFzawoCAwAHAA4ACAAJTDFTMlMzUw==
+</formula></item>
+<item name='$Collation' summary='true'>
+<rawitemdata type='2'>
+IwACAABEAWYAAAAIAAFmAAgABwBUYXNrTmFtZUR1ZURhdGU=
+</rawitemdata></item>
+<item name='$ViewFormat' summary='true' sign='true'>
+<rawitemdata type='5'>
+AQACAAEACAAAAFZDBQAIAAQAAAAAAFAAAQAACgAAAAAAAAAAAAACAAAAVkMFAAcACAAAAAAAUAAB
+AAAKAAAAAAAAAAAAAAIAAABUYXNrTmFtZU5hbWVEdWVEYXRlRHVlIERhdGUmAAEAAAABAQAJAQAA
+CgEBDgoAAAEArSsBAAEAAQAAAAAAAAAAAFdDAQEACQAAAAAAAAAAAAAAAAAAAAAAAMAAAAAAAP//
+AAAAAAAAAAAAAAAAAABXQwEBAAkAAAAAAAAAAAAAAAAAAAAAAADAAAAAAAD//wAAAAAAAAAAAAAA
+AAAAQgAQAAAAAQD///8ABQD///8AAQAAAAAAAAAAAAAAAAABAP///wABAP///wAAAAEAAAAAAAEA
+AAAAAAEAAAAAAAAACAAAAAAAAQBYQwAIgAEAAAAAAAECAgIBAQEBBwQDAAAAAAAAAAAvLyA6WEMA
+CIABAAAAAAABAgICAQEBAQcEAwAAAAAAAAAALy8gOllDAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABZQwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAA
+</rawitemdata></item>
+<item name='$Comment' sign='true'><text/></item>
+<item name='$Flags'><text>Y</text></item>
+<item name='$TITLE' sign='true'><text>Tasks|Tasks</text></item>
+<item name='$DesignerVersion' sign='true'><text>8.5.3</text></item></note>
+

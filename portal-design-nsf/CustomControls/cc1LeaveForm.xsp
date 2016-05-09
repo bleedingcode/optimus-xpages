@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xp:view
+	xmlns:xp="http://www.ibm.com/xsp/core"
+	xmlns:xe="http://www.ibm.com/xsp/coreex">
+	<xe:formTable
+		formTitle="Leave Record"
+		disableErrorSummary="true">
+		<xp:this.facets>
+			<xp:panel xp:key="footer">
+				<xp:button
+					value="Save"
+					id="btnLeaveSave"
+					styleClass="btn btn-success">
+					<xp:eventHandler
+						event="onclick"
+						submit="true"
+						refreshMode="partial"
+						refreshId="divLeaveWrapper"
+						execMode="partial"
+						execId="divLeaveWrapper">
+						<xp:this.action><![CDATA[#{javascript:App.leaveCon.SaveDocument();}]]></xp:this.action>
+					</xp:eventHandler>
+				</xp:button>
+				<xp:link
+					escape="true"
+					text="Cancel"
+					id="linkLeaveCancel"
+					style="margin-left:10px;">
+					<xp:eventHandler
+						event="onclick"
+						submit="true"
+						refreshMode="partial"
+						refreshId="divLeaveWrapper"
+						execMode="partial"
+						execId="divLeaveWrapper"
+						disableValidators="true">
+						<xp:this.action><![CDATA[#{javascript:App.leaveCon.CloseDocument();}]]></xp:this.action>
+					</xp:eventHandler>
+				</xp:link>
+			</xp:panel>
+		</xp:this.facets>
+		<xe:formRow label="Leave Type">
+			<xp:comboBox
+				required="true"
+				style="width:auto;"
+				value="#{App.leaveCon.leave.leaveType}">
+				<xp:this.validators>
+					<xp:validateRequired message="Please provide a Leave Type"></xp:validateRequired>
+				</xp:this.validators>
+				<xp:selectItem
+					itemLabel="-Select-"
+					itemValue="">
+				</xp:selectItem>
+				<xp:selectItem itemLabel="Annual Leave"></xp:selectItem>
+				<xp:selectItem itemLabel="Sick Leave"></xp:selectItem>
+			</xp:comboBox>
+		</xe:formRow>
+		<xe:formRow label="Leave From">
+			<xp:inputText
+				required="true"
+				value="#{App.leaveCon.leave.leaveFrom}">
+				<xp:this.validators>
+					<xp:validateRequired message="Please provide a Leave From"></xp:validateRequired>
+				</xp:this.validators>
+				<xp:dateTimeHelper id="dateTimeHelper1"></xp:dateTimeHelper>
+				<xp:this.converter>
+					<xp:convertDateTime type="date"></xp:convertDateTime>
+				</xp:this.converter>
+			</xp:inputText>
+		</xe:formRow>
+		<xe:formRow label="Leave To">
+			<xp:inputText
+				required="true"
+				value="#{App.leaveCon.leave.leaveTo}">
+				<xp:this.validators>
+					<xp:validateRequired message="Please provide a Leave To"></xp:validateRequired>
+				</xp:this.validators>
+				<xp:dateTimeHelper id="dateTimeHelper2"></xp:dateTimeHelper>
+				<xp:this.converter>
+					<xp:convertDateTime type="date"></xp:convertDateTime>
+				</xp:this.converter>
+			</xp:inputText>
+		</xe:formRow>
+	</xe:formTable>
+</xp:view>
