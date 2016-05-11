@@ -1,4 +1,4 @@
-OPTIMUS XPAGES PORTAL DESIGN + DATA DESIGN
+OPTIMUS XPAGES PORTAL + DATA NSFs
 
 VERSIONS:
 - IBM Domino Designer 9.0.1
@@ -7,4 +7,4 @@ VERSIONS:
 
 INSTRUCTIONS:
 
-- If you use the NSFs, be sure to sign them using your id before running it on your server
+- Be sure to sign the NSFs using your id before running it on your server
