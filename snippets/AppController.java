@@ -30,9 +30,9 @@ public class AppController implements Serializable{
 			appModel.appName = key;
 			
 			if(key.equals("leave")) {
-				appModel.dataPath = "demo/ox2/final/portaldata.nsf";
+				appModel.dataPath = "demo/ox2/portaldata.nsf";
 			}else if(key.equals("tasks")) {
-				appModel.dataPath = "demo/ox2/final/portaldata.nsf";
+				appModel.dataPath = "demo/ox2/portaldata.nsf";
 			}
 		} catch (Exception e) {
 			e.printStackTrace();
